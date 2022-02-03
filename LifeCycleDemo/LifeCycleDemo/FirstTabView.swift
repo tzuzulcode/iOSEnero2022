@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct FirstTabView: View {
+    @EnvironmentObject var timerData: TimerData
     var body: some View {
-        Text("View one")
+        Text("\(timerData.timerCount)")
+            .font(.largeTitle)
+            .fontWeight(.bold)
             .onAppear(perform: {
                 print("onAppear realizado: view1")
             })
@@ -21,6 +24,6 @@ struct FirstTabView: View {
 
 struct FirstTabView_Previews: PreviewProvider {
     static var previews: some View {
-        FirstTabView()
+        FirstTabView().environmentObject(TimerData())
     }
 }

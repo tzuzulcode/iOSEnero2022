@@ -10,9 +10,11 @@ import SwiftUI
 @main
 struct LifeCycleDemoApp: App {
     @Environment(\.scenePhase) private var scenePhase
+    @StateObject var timerData = TimerData()
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(timerData)
         }.onChange(of: scenePhase, perform: {phase in
             switch phase{
             case .active:
@@ -24,7 +26,7 @@ struct LifeCycleDemoApp: App {
             default:
                 print("Fase de escena desconocida")
             }
-    
         })
+            
     }
 }

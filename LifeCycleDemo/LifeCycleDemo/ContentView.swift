@@ -8,26 +8,29 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var timerData : TimerData
     var body: some View {
-        TabView{
-            TabView{
-                FirstTabView()
-                    .tabItem{
-                        Image(systemName: "01.circle")
-                        Text("First")
-                    }
-                SecondTabView()
-                    .tabItem{
-                        Image(systemName: "02.circle")
-                        Text("Second")
-                    }
+        NavigationView{
+            VStack{
+                Text("Timer count = \(timerData.timerCount)")
+                
+                Button(action: resetCount){
+                    Text("Reset Counter")
+                }
+                NavigationLink(destination: TabsView()){
+                    Text("Tabs view")
+                }.padding()
             }
         }
+    }
+    
+    func resetCount(){
+        timerData.resetCount()
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView().environmentObject(TimerData())
     }
 }
