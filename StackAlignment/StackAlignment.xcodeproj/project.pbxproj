@@ -7,27 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BB81517727AC45DC00D270B2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB81517627AC45DC00D270B2 /* User.swift */; };
-		BB81517927AC4D0C00D270B2 /* UserObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB81517827AC4D0C00D270B2 /* UserObject.swift */; };
-		BB902F9B27AAFA93001E0ABC /* StorageApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB902F9A27AAFA93001E0ABC /* StorageApp.swift */; };
-		BB902F9D27AAFA93001E0ABC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB902F9C27AAFA93001E0ABC /* ContentView.swift */; };
-		BB902F9F27AAFA95001E0ABC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB902F9E27AAFA95001E0ABC /* Assets.xcassets */; };
-		BB902FA227AAFA95001E0ABC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB902FA127AAFA95001E0ABC /* Preview Assets.xcassets */; };
+		BB371C1027B18A3B007B02B6 /* CrossStackAlignmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB371C0F27B18A3B007B02B6 /* CrossStackAlignmentView.swift */; };
+		BB371C1227B190D2007B02B6 /* CustomZStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB371C1127B190D1007B02B6 /* CustomZStackView.swift */; };
+		BBBA9A2027AD94F100769431 /* StackAlignmentApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBA9A1F27AD94F100769431 /* StackAlignmentApp.swift */; };
+		BBBA9A2227AD94F100769431 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBA9A2127AD94F100769431 /* ContentView.swift */; };
+		BBBA9A2427AD94F100769431 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBBA9A2327AD94F100769431 /* Assets.xcassets */; };
+		BBBA9A2727AD94F100769431 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBBA9A2627AD94F100769431 /* Preview Assets.xcassets */; };
+		BBBA9A2E27AD9B6E00769431 /* Alignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBA9A2D27AD9B6E00769431 /* Alignment.swift */; };
+		BBBA9A3027AD9EDF00769431 /* AlineacionHStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBA9A2F27AD9EDF00769431 /* AlineacionHStack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		BB81517527AC438200D270B2 /* Storage.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Storage.entitlements; sourceTree = "<group>"; };
-		BB81517627AC45DC00D270B2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		BB81517827AC4D0C00D270B2 /* UserObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserObject.swift; sourceTree = "<group>"; };
-		BB902F9727AAFA93001E0ABC /* Storage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Storage.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		BB902F9A27AAFA93001E0ABC /* StorageApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageApp.swift; sourceTree = "<group>"; };
-		BB902F9C27AAFA93001E0ABC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		BB902F9E27AAFA95001E0ABC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		BB902FA127AAFA95001E0ABC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BB371C0F27B18A3B007B02B6 /* CrossStackAlignmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrossStackAlignmentView.swift; sourceTree = "<group>"; };
+		BB371C1127B190D1007B02B6 /* CustomZStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomZStackView.swift; sourceTree = "<group>"; };
+		BBBA9A1C27AD94F000769431 /* StackAlignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StackAlignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBBA9A1F27AD94F100769431 /* StackAlignmentApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackAlignmentApp.swift; sourceTree = "<group>"; };
+		BBBA9A2127AD94F100769431 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		BBBA9A2327AD94F100769431 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BBBA9A2627AD94F100769431 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BBBA9A2D27AD9B6E00769431 /* Alignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alignment.swift; sourceTree = "<group>"; };
+		BBBA9A2F27AD9EDF00769431 /* AlineacionHStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlineacionHStack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		BB902F9427AAFA93001E0ABC /* Frameworks */ = {
+		BBBA9A1927AD94F000769431 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -37,40 +40,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		BB902F8E27AAFA93001E0ABC = {
+		BBBA9A1327AD94F000769431 = {
 			isa = PBXGroup;
 			children = (
-				BB902F9927AAFA93001E0ABC /* Storage */,
-				BB902F9827AAFA93001E0ABC /* Products */,
+				BBBA9A1E27AD94F000769431 /* StackAlignment */,
+				BBBA9A1D27AD94F000769431 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		BB902F9827AAFA93001E0ABC /* Products */ = {
+		BBBA9A1D27AD94F000769431 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BB902F9727AAFA93001E0ABC /* Storage.app */,
+				BBBA9A1C27AD94F000769431 /* StackAlignment.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BB902F9927AAFA93001E0ABC /* Storage */ = {
+		BBBA9A1E27AD94F000769431 /* StackAlignment */ = {
 			isa = PBXGroup;
 			children = (
-				BB81517827AC4D0C00D270B2 /* UserObject.swift */,
-				BB81517527AC438200D270B2 /* Storage.entitlements */,
-				BB902F9A27AAFA93001E0ABC /* StorageApp.swift */,
-				BB902F9C27AAFA93001E0ABC /* ContentView.swift */,
-				BB902F9E27AAFA95001E0ABC /* Assets.xcassets */,
-				BB902FA027AAFA95001E0ABC /* Preview Content */,
-				BB81517627AC45DC00D270B2 /* User.swift */,
+				BBBA9A2F27AD9EDF00769431 /* AlineacionHStack.swift */,
+				BBBA9A1F27AD94F100769431 /* StackAlignmentApp.swift */,
+				BBBA9A2127AD94F100769431 /* ContentView.swift */,
+				BBBA9A2327AD94F100769431 /* Assets.xcassets */,
+				BBBA9A2527AD94F100769431 /* Preview Content */,
+				BBBA9A2D27AD9B6E00769431 /* Alignment.swift */,
+				BB371C0F27B18A3B007B02B6 /* CrossStackAlignmentView.swift */,
+				BB371C1127B190D1007B02B6 /* CustomZStackView.swift */,
 			);
-			path = Storage;
+			path = StackAlignment;
 			sourceTree = "<group>";
 		};
-		BB902FA027AAFA95001E0ABC /* Preview Content */ = {
+		BBBA9A2527AD94F100769431 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				BB902FA127AAFA95001E0ABC /* Preview Assets.xcassets */,
+				BBBA9A2627AD94F100769431 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -78,39 +82,39 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BB902F9627AAFA93001E0ABC /* Storage */ = {
+		BBBA9A1B27AD94F000769431 /* StackAlignment */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BB902FA527AAFA95001E0ABC /* Build configuration list for PBXNativeTarget "Storage" */;
+			buildConfigurationList = BBBA9A2A27AD94F100769431 /* Build configuration list for PBXNativeTarget "StackAlignment" */;
 			buildPhases = (
-				BB902F9327AAFA93001E0ABC /* Sources */,
-				BB902F9427AAFA93001E0ABC /* Frameworks */,
-				BB902F9527AAFA93001E0ABC /* Resources */,
+				BBBA9A1827AD94F000769431 /* Sources */,
+				BBBA9A1927AD94F000769431 /* Frameworks */,
+				BBBA9A1A27AD94F000769431 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Storage;
-			productName = Storage;
-			productReference = BB902F9727AAFA93001E0ABC /* Storage.app */;
+			name = StackAlignment;
+			productName = StackAlignment;
+			productReference = BBBA9A1C27AD94F000769431 /* StackAlignment.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		BB902F8F27AAFA93001E0ABC /* Project object */ = {
+		BBBA9A1427AD94F000769431 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1320;
 				LastUpgradeCheck = 1320;
 				TargetAttributes = {
-					BB902F9627AAFA93001E0ABC = {
+					BBBA9A1B27AD94F000769431 = {
 						CreatedOnToolsVersion = 13.2.1;
 					};
 				};
 			};
-			buildConfigurationList = BB902F9227AAFA93001E0ABC /* Build configuration list for PBXProject "Storage" */;
+			buildConfigurationList = BBBA9A1727AD94F000769431 /* Build configuration list for PBXProject "StackAlignment" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -118,44 +122,46 @@
 				en,
 				Base,
 			);
-			mainGroup = BB902F8E27AAFA93001E0ABC;
-			productRefGroup = BB902F9827AAFA93001E0ABC /* Products */;
+			mainGroup = BBBA9A1327AD94F000769431;
+			productRefGroup = BBBA9A1D27AD94F000769431 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BB902F9627AAFA93001E0ABC /* Storage */,
+				BBBA9A1B27AD94F000769431 /* StackAlignment */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		BB902F9527AAFA93001E0ABC /* Resources */ = {
+		BBBA9A1A27AD94F000769431 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB902FA227AAFA95001E0ABC /* Preview Assets.xcassets in Resources */,
-				BB902F9F27AAFA95001E0ABC /* Assets.xcassets in Resources */,
+				BBBA9A2727AD94F100769431 /* Preview Assets.xcassets in Resources */,
+				BBBA9A2427AD94F100769431 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		BB902F9327AAFA93001E0ABC /* Sources */ = {
+		BBBA9A1827AD94F000769431 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB902F9D27AAFA93001E0ABC /* ContentView.swift in Sources */,
-				BB81517927AC4D0C00D270B2 /* UserObject.swift in Sources */,
-				BB902F9B27AAFA93001E0ABC /* StorageApp.swift in Sources */,
-				BB81517727AC45DC00D270B2 /* User.swift in Sources */,
+				BBBA9A2227AD94F100769431 /* ContentView.swift in Sources */,
+				BBBA9A2E27AD9B6E00769431 /* Alignment.swift in Sources */,
+				BBBA9A3027AD9EDF00769431 /* AlineacionHStack.swift in Sources */,
+				BB371C1227B190D2007B02B6 /* CustomZStackView.swift in Sources */,
+				BB371C1027B18A3B007B02B6 /* CrossStackAlignmentView.swift in Sources */,
+				BBBA9A2027AD94F100769431 /* StackAlignmentApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		BB902FA327AAFA95001E0ABC /* Debug */ = {
+		BBBA9A2827AD94F100769431 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -216,7 +222,7 @@
 			};
 			name = Debug;
 		};
-		BB902FA427AAFA95001E0ABC /* Release */ = {
+		BBBA9A2927AD94F100769431 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -271,15 +277,14 @@
 			};
 			name = Release;
 		};
-		BB902FA627AAFA95001E0ABC /* Debug */ = {
+		BBBA9A2B27AD94F100769431 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = Storage/Storage.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Storage/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"StackAlignment/Preview Content\"";
 				DEVELOPMENT_TEAM = M6K96Y9B53;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -293,7 +298,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = tzuzulcode.Storage;
+				PRODUCT_BUNDLE_IDENTIFIER = tzuzulcode.StackAlignment;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -301,15 +306,14 @@
 			};
 			name = Debug;
 		};
-		BB902FA727AAFA95001E0ABC /* Release */ = {
+		BBBA9A2C27AD94F100769431 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = Storage/Storage.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Storage/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"StackAlignment/Preview Content\"";
 				DEVELOPMENT_TEAM = M6K96Y9B53;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -323,7 +327,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = tzuzulcode.Storage;
+				PRODUCT_BUNDLE_IDENTIFIER = tzuzulcode.StackAlignment;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -334,25 +338,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BB902F9227AAFA93001E0ABC /* Build configuration list for PBXProject "Storage" */ = {
+		BBBA9A1727AD94F000769431 /* Build configuration list for PBXProject "StackAlignment" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BB902FA327AAFA95001E0ABC /* Debug */,
-				BB902FA427AAFA95001E0ABC /* Release */,
+				BBBA9A2827AD94F100769431 /* Debug */,
+				BBBA9A2927AD94F100769431 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BB902FA527AAFA95001E0ABC /* Build configuration list for PBXNativeTarget "Storage" */ = {
+		BBBA9A2A27AD94F100769431 /* Build configuration list for PBXNativeTarget "StackAlignment" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BB902FA627AAFA95001E0ABC /* Debug */,
-				BB902FA727AAFA95001E0ABC /* Release */,
+				BBBA9A2B27AD94F100769431 /* Debug */,
+				BBBA9A2C27AD94F100769431 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = BB902F8F27AAFA93001E0ABC /* Project object */;
+	rootObject = BBBA9A1427AD94F000769431 /* Project object */;
 }
