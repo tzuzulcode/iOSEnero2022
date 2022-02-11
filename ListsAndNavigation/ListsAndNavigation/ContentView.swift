@@ -9,17 +9,13 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var toggleStatus = false
-    var listData:[TodoItem] = [
+    @State private var listData:[TodoItem] = [
         TodoItem(task:"Lavar el auto",imageName: "car.fill"),
         TodoItem(task:"Limpiar la casa",imageName: "house.fill"),
         TodoItem(task:"Ir a cierto lugar a las 3pm",imageName: "building.fill"),
         TodoItem(task:"Comprar algo en internet",imageName: "cart.fill"),
         TodoItem(task:"Traer comida",imageName: "bag.fill")
     ]
-    
-    func deleteItem(at offsets:IndexSet){
-        print(offsets)
-    }
     
     var body: some View {
         NavigationView{
@@ -41,24 +37,26 @@ struct ContentView: View {
                     Text("Preparar comida")
                     
                     //Definiendo contenido dinámico en una lista estática
-                    ForEach(listData){item in
-                        NavigationLink(destination: Text(item.task)){
-                            HStack{
-                                Image(systemName: item.imageName)
-                                Text(item.task)
-                            }
-                        }
-                        
-                    }.onDelete(perform: deleteItem)
                 }
+                ForEach(listData){item in
+                    NavigationLink(destination: Text(item.task)){
+                        HStack{
+                            Image("album")
+                            Text(item.task)
+                        }
+                    }
+                    
+                }.onDelete(perform: deleteItem)
+                    .onMove(perform: moveItem)
             }
             .navigationTitle(Text("Lista de cosas"))
             .toolbar{
-                ToolbarItemGroup{
+                /*ToolbarItemGroup{
                     Button(action:{}){
                         Text("Añadir")
                     }
-                }
+                }*/
+                EditButton()
                 
             }
             
@@ -76,6 +74,15 @@ struct ContentView: View {
             
         }
     }
+    
+    func deleteItem(at offsets:IndexSet){
+        print(offsets)
+        listData.remove(atOffsets: offsets)
+    }
+    func moveItem(from source:IndexSet,to destination:Int){
+        listData.move(fromOffsets: source, toOffset: destination)
+    }
+    
 }
 
 struct TodoItem:Identifiable{
