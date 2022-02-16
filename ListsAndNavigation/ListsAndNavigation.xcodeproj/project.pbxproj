@@ -11,6 +11,12 @@
 		BB0A6A2727B42CD600869D89 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0A6A2627B42CD600869D89 /* ContentView.swift */; };
 		BB0A6A2927B42CD800869D89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB0A6A2827B42CD800869D89 /* Assets.xcassets */; };
 		BB0A6A2C27B42CD800869D89 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB0A6A2B27B42CD800869D89 /* Preview Assets.xcassets */; };
+		BB557FB527BC175100057E57 /* RetoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB557FB427BC175100057E57 /* RetoView.swift */; };
+		BB557FB727BC178B00057E57 /* CarStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB557FB627BC178B00057E57 /* CarStore.swift */; };
+		BB557FB927BC17F000057E57 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB557FB827BC17F000057E57 /* Car.swift */; };
+		BB557FBB27BC190300057E57 /* CarsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB557FBA27BC190300057E57 /* CarsView.swift */; };
+		BB557FBD27BC1C4900057E57 /* CarDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB557FBC27BC1C4900057E57 /* CarDetailsView.swift */; };
+		BB557FBF27BC1E6800057E57 /* AddNewCarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB557FBE27BC1E6800057E57 /* AddNewCarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +25,12 @@
 		BB0A6A2627B42CD600869D89 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BB0A6A2827B42CD800869D89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB0A6A2B27B42CD800869D89 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BB557FB427BC175100057E57 /* RetoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetoView.swift; sourceTree = "<group>"; };
+		BB557FB627BC178B00057E57 /* CarStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarStore.swift; sourceTree = "<group>"; };
+		BB557FB827BC17F000057E57 /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
+		BB557FBA27BC190300057E57 /* CarsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsView.swift; sourceTree = "<group>"; };
+		BB557FBC27BC1C4900057E57 /* CarDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailsView.swift; sourceTree = "<group>"; };
+		BB557FBE27BC1E6800057E57 /* AddNewCarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewCarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,10 +63,16 @@
 		BB0A6A2327B42CD600869D89 /* ListsAndNavigation */ = {
 			isa = PBXGroup;
 			children = (
+				BB557FBE27BC1E6800057E57 /* AddNewCarView.swift */,
+				BB557FBA27BC190300057E57 /* CarsView.swift */,
+				BB557FB627BC178B00057E57 /* CarStore.swift */,
 				BB0A6A2427B42CD600869D89 /* ListsAndNavigationApp.swift */,
 				BB0A6A2627B42CD600869D89 /* ContentView.swift */,
 				BB0A6A2827B42CD800869D89 /* Assets.xcassets */,
 				BB0A6A2A27B42CD800869D89 /* Preview Content */,
+				BB557FB427BC175100057E57 /* RetoView.swift */,
+				BB557FB827BC17F000057E57 /* Car.swift */,
+				BB557FBC27BC1C4900057E57 /* CarDetailsView.swift */,
 			);
 			path = ListsAndNavigation;
 			sourceTree = "<group>";
@@ -137,8 +155,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB557FB727BC178B00057E57 /* CarStore.swift in Sources */,
+				BB557FBB27BC190300057E57 /* CarsView.swift in Sources */,
+				BB557FBF27BC1E6800057E57 /* AddNewCarView.swift in Sources */,
+				BB557FB527BC175100057E57 /* RetoView.swift in Sources */,
+				BB557FB927BC17F000057E57 /* Car.swift in Sources */,
 				BB0A6A2727B42CD600869D89 /* ContentView.swift in Sources */,
 				BB0A6A2527B42CD600869D89 /* ListsAndNavigationApp.swift in Sources */,
+				BB557FBD27BC1C4900057E57 /* CarDetailsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

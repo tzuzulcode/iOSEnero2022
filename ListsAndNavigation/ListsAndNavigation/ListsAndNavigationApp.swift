@@ -11,7 +11,7 @@ import SwiftUI
 struct ListsAndNavigationApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            CarsView()
         }
     }
 }
