@@ -13,7 +13,7 @@ struct CarDetailsView: View {
         Form{
             Section(header: Text("Car Details")) {
 
-                Image(selectedCar.image)
+                Image(selectedCar.img)
 
                     .resizable()
 
@@ -41,6 +41,6 @@ struct CarDetailsView: View {
 
 struct CarDetailsView_Previews: PreviewProvider {
     static var previews: some View {
-        CarDetailsView(selectedCar: Car(id: "a1", name: "Tesla", description: "Descripción del auto", image: "tesla1"))
+        CarDetailsView(selectedCar: cars[0])
     }
 }

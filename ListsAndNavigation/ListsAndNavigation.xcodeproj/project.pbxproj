@@ -17,6 +17,8 @@
 		BB557FBB27BC190300057E57 /* CarsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB557FBA27BC190300057E57 /* CarsView.swift */; };
 		BB557FBD27BC1C4900057E57 /* CarDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB557FBC27BC1C4900057E57 /* CarDetailsView.swift */; };
 		BB557FBF27BC1E6800057E57 /* AddNewCarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB557FBE27BC1E6800057E57 /* AddNewCarView.swift */; };
+		BBD6DA6127BD6899002A7C2D /* CarsData.json in Resources */ = {isa = PBXBuildFile; fileRef = BBD6DA6027BD6899002A7C2D /* CarsData.json */; };
+		BBD6DA6327BD6A04002A7C2D /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD6DA6227BD6A04002A7C2D /* ModelData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 		BB557FBA27BC190300057E57 /* CarsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsView.swift; sourceTree = "<group>"; };
 		BB557FBC27BC1C4900057E57 /* CarDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailsView.swift; sourceTree = "<group>"; };
 		BB557FBE27BC1E6800057E57 /* AddNewCarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewCarView.swift; sourceTree = "<group>"; };
+		BBD6DA6027BD6899002A7C2D /* CarsData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CarsData.json; sourceTree = "<group>"; };
+		BBD6DA6227BD6A04002A7C2D /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 		BB0A6A2327B42CD600869D89 /* ListsAndNavigation */ = {
 			isa = PBXGroup;
 			children = (
+				BBD6DA6227BD6A04002A7C2D /* ModelData.swift */,
+				BBD6DA6027BD6899002A7C2D /* CarsData.json */,
 				BB557FBE27BC1E6800057E57 /* AddNewCarView.swift */,
 				BB557FBA27BC190300057E57 /* CarsView.swift */,
 				BB557FB627BC178B00057E57 /* CarStore.swift */,
@@ -144,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB0A6A2C27B42CD800869D89 /* Preview Assets.xcassets in Resources */,
+				BBD6DA6127BD6899002A7C2D /* CarsData.json in Resources */,
 				BB0A6A2927B42CD800869D89 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -157,6 +164,7 @@
 			files = (
 				BB557FB727BC178B00057E57 /* CarStore.swift in Sources */,
 				BB557FBB27BC190300057E57 /* CarsView.swift in Sources */,
+				BBD6DA6327BD6A04002A7C2D /* ModelData.swift in Sources */,
 				BB557FBF27BC1E6800057E57 /* AddNewCarView.swift in Sources */,
 				BB557FB527BC175100057E57 /* RetoView.swift in Sources */,
 				BB557FB927BC17F000057E57 /* Car.swift in Sources */,

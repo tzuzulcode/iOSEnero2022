@@ -6,11 +6,17 @@
 //
 
 import Foundation
+import SwiftUI
 
-struct Car : Identifiable{
+struct Car : Codable,Identifiable{
     var id: String
     var name: String
     var description: String
+    var img: String
     
-    var image: String
+    
+    var image:Image{
+        Image(img)
+    }
+    
 }

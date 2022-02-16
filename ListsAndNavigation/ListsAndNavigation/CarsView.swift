@@ -8,10 +8,7 @@
 import SwiftUI
 
 struct CarsView: View {
-    @StateObject var carStore : CarStore = CarStore(cars: [
-    Car(id: "a1", name: "Tesla", description: "Descripción del auto", image: "tesla1"),
-    Car(id: "a2", name: "Tesla 2", description: "Descripción del auto", image: "tesla2")
-    ])
+    @StateObject var carStore : CarStore = CarStore(cars:cars)
     var body: some View {
         NavigationView{
             List {
@@ -19,6 +16,8 @@ struct CarsView: View {
                 ForEach (carStore.cars) { car in
                     ListCell(car: car)
                 }
+                .onDelete(perform: deleteItem)
+                    .onMove(perform: moveItem)
                 //Agregar el onDelete y onMove
             }.navigationBarTitle(Text("Tesla cars"))
                 .navigationBarItems(leading: NavigationLink(destination: AddNewCarView(carStore: carStore)){
@@ -27,6 +26,14 @@ struct CarsView: View {
         }
             
         
+    }
+    
+    func deleteItem(at offsets:IndexSet){
+        print(offsets)
+        carStore.cars.remove(atOffsets: offsets)
+    }
+    func moveItem(from source:IndexSet,to destination:Int){
+        carStore.cars.move(fromOffsets: source, toOffset: destination)
     }
 }
 
@@ -44,7 +51,7 @@ struct ListCell: View {
         NavigationLink(destination: CarDetailsView(selectedCar: car)){
             HStack {
                 
-                Image(car.image)
+                Image(car.img)
                 
                     .resizable()
                 

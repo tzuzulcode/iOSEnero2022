@@ -33,7 +33,7 @@ struct AddNewCarView: View {
         }
     }
     func addNewCar(){
-        let newCar = Car(id: UUID().uuidString, name: name, description: description, image: "tesla1")
+        let newCar = Car(id: UUID().uuidString, name: name, description: description, img: "tesla1")
         
         carStore.cars.append(newCar)
     }
@@ -55,9 +55,6 @@ struct DataInput: View{
 
 struct AddNewCarView_Previews: PreviewProvider {
     static var previews: some View {
-        AddNewCarView(carStore: CarStore(cars: [
-            Car(id: "a1", name: "Tesla", description: "Descripción del auto", image: "tesla1"),
-            Car(id: "a2", name: "Tesla 2", description: "Descripción del auto", image: "tesla2")
-            ]))
+        AddNewCarView(carStore: CarStore(cars: cars))
     }
 }
