@@ -31,50 +31,58 @@ func loadJSON<T:Decodable>()->T{
     
 }
 
-func writeJSON(){
+
+
+func writeJSON(cars:[Car]){
     
-    
-    
+    print("Writing...")
     
     let data:Data
     
     //Encoder
     
     do{
-        let decoder = JSONDecoder()
-        return try decoder.decode(T.self, from: data)
+        let encoder = JSONEncoder()
+        data = try encoder.encode(cars)
+        print(data)
     }catch{
-        fatalError("No se puede decodificar")
+        fatalError("No se puede codificar")
     }
     
-    //Data
-    
     do{
-        data = try Data(encodeContent)
-    }catch{
-        fatalError("No se puede cargar el archivo")
-    }
-    
-    
-    let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
-    
-    var filename = path.appendingPathComponent("CarsData.json")
-    
-    
-    do{
+        //let path = try FileManager.default.url(for: .documentDirectory, in: .userDomainMask,appropriateFor: nil,create: false)
         
-        if var jsonString = String(data:data,encoding: String.Encoding.utf8){
-            try jsonString.write(to: filename)
+        //let filename = path.appendingPathComponent("CarsData.json")
+        
+        guard let filename = Bundle.main.url(forResource: "CarsData.json", withExtension: nil)
+        else{
+            fatalError("No se puede abrir el archivo")
+        }
+                
+        
+        print(filename)
+        
+        guard let outputStream = OutputStream(url: filename, append: false) else {
+            print("No se puede abrir el archivo")
+            return
         }
         
+        print("Writing in Output Stream")
+        
+        outputStream.open()
+        if let jsonString = String(data:data,encoding: String.Encoding.utf8){
+            print(jsonString)
+            outputStream.write(jsonString,maxLength: 1000)
+            
+            
+        }
+        
+        outputStream.close()
         
     }catch let error{
-        print(error.localizedDescription)
+        print(error)
+        fatalError("No se puede abrir el archivo")
     }
-    
-    
-    
-   
     
     
 }

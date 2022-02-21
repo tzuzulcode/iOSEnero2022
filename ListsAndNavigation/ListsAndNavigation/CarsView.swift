@@ -31,9 +31,11 @@ struct CarsView: View {
     func deleteItem(at offsets:IndexSet){
         print(offsets)
         carStore.cars.remove(atOffsets: offsets)
+        writeJSON(cars: carStore.cars)
     }
     func moveItem(from source:IndexSet,to destination:Int){
         carStore.cars.move(fromOffsets: source, toOffset: destination)
+        writeJSON(cars: carStore.cars)
     }
 }
 

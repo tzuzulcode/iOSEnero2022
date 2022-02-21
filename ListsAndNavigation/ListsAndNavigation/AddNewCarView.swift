@@ -36,6 +36,7 @@ struct AddNewCarView: View {
         let newCar = Car(id: UUID().uuidString, name: name, description: description, img: "tesla1")
         
         carStore.cars.append(newCar)
+        writeJSON(cars: carStore.cars)
     }
 }
 
