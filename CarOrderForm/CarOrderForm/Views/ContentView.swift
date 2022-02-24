@@ -1,15 +1,18 @@
 //
 //  ContentView.swift
-//  OutlineDisclosureGroups
+//  CarOrderForm
 //
-//  Created by Tzuzul Rosas on 21/02/22.
+//  Created by Tzuzul Rosas on 23/02/22.
 //
 
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        CarsListView()
+        VStack{
+            CarInfoView()
+            FormView()
+        }
     }
 }
 
