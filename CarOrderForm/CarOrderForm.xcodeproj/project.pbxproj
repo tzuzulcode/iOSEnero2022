@@ -15,6 +15,10 @@
 		BB1EA20827C6ACD1005E9BDD /* CarInfoDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1EA20727C6ACD1005E9BDD /* CarInfoDetailsView.swift */; };
 		BB1EA20A27C6AE11005E9BDD /* CarInfoPhotosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1EA20927C6AE11005E9BDD /* CarInfoPhotosView.swift */; };
 		BB1EA20C27C6AFC2005E9BDD /* CarInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1EA20B27C6AFC2005E9BDD /* CarInfoView.swift */; };
+		BB24CD4427CD3A54003E0715 /* TopOrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB24CD4327CD3A54003E0715 /* TopOrderView.swift */; };
+		BB24CD4627CD3A62003E0715 /* BottomOrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB24CD4527CD3A62003E0715 /* BottomOrderView.swift */; };
+		BB24CD4827CD3E9B003E0715 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB24CD4727CD3E9B003E0715 /* Font.swift */; };
+		BB28BE4627C948CC00ED2460 /* PropertyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB28BE4527C948CC00ED2460 /* PropertyViewModel.swift */; };
 		BB96BFC227C7FB2900A64C52 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB96BFC127C7FB2800A64C52 /* ColorExtension.swift */; };
 		BB96BFC427C7FDDE00A64C52 /* FormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB96BFC327C7FDDE00A64C52 /* FormView.swift */; };
 /* End PBXBuildFile section */
@@ -35,6 +39,10 @@
 		BB1EA20727C6ACD1005E9BDD /* CarInfoDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarInfoDetailsView.swift; sourceTree = "<group>"; };
 		BB1EA20927C6AE11005E9BDD /* CarInfoPhotosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarInfoPhotosView.swift; sourceTree = "<group>"; };
 		BB1EA20B27C6AFC2005E9BDD /* CarInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarInfoView.swift; sourceTree = "<group>"; };
+		BB24CD4327CD3A54003E0715 /* TopOrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopOrderView.swift; sourceTree = "<group>"; };
+		BB24CD4527CD3A62003E0715 /* BottomOrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomOrderView.swift; sourceTree = "<group>"; };
+		BB24CD4727CD3E9B003E0715 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		BB28BE4527C948CC00ED2460 /* PropertyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyViewModel.swift; sourceTree = "<group>"; };
 		BB96BFC127C7FB2800A64C52 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		BB96BFC327C7FDDE00A64C52 /* FormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -99,6 +107,7 @@
 		BB1EA1F827C6A519005E9BDD /* Supporting Views */ = {
 			isa = PBXGroup;
 			children = (
+				BB24CD4227CD3A35003E0715 /* Order Completed */,
 				BB1EA20B27C6AFC2005E9BDD /* CarInfoView.swift */,
 				BB1EA1FD27C6A637005E9BDD /* Car Info */,
 				BB96BFC327C7FDDE00A64C52 /* FormView.swift */,
@@ -111,6 +120,7 @@
 			children = (
 				BB1EA20027C6AACD005E9BDD /* Font */,
 				BB96BFC127C7FB2800A64C52 /* ColorExtension.swift */,
+				BB24CD4727CD3E9B003E0715 /* Font.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -118,6 +128,7 @@
 		BB1EA1FA27C6A550005E9BDD /* View Model */ = {
 			isa = PBXGroup;
 			children = (
+				BB28BE4527C948CC00ED2460 /* PropertyViewModel.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -159,6 +170,15 @@
 				BB1EA20427C6AADE005E9BDD /* AvenirNextCondensed-UltraLight.ttf */,
 			);
 			path = Font;
+			sourceTree = "<group>";
+		};
+		BB24CD4227CD3A35003E0715 /* Order Completed */ = {
+			isa = PBXGroup;
+			children = (
+				BB24CD4327CD3A54003E0715 /* TopOrderView.swift */,
+				BB24CD4527CD3A62003E0715 /* BottomOrderView.swift */,
+			);
+			path = "Order Completed";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,11 +251,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB24CD4627CD3A62003E0715 /* BottomOrderView.swift in Sources */,
 				BB96BFC427C7FDDE00A64C52 /* FormView.swift in Sources */,
+				BB28BE4627C948CC00ED2460 /* PropertyViewModel.swift in Sources */,
 				BB1EA1EC27C6A486005E9BDD /* ContentView.swift in Sources */,
+				BB24CD4427CD3A54003E0715 /* TopOrderView.swift in Sources */,
 				BB1EA20A27C6AE11005E9BDD /* CarInfoPhotosView.swift in Sources */,
 				BB1EA1EA27C6A486005E9BDD /* CarOrderFormApp.swift in Sources */,
 				BB1EA20C27C6AFC2005E9BDD /* CarInfoView.swift in Sources */,
+				BB24CD4827CD3E9B003E0715 /* Font.swift in Sources */,
 				BB1EA20827C6ACD1005E9BDD /* CarInfoDetailsView.swift in Sources */,
 				BB96BFC227C7FB2900A64C52 /* ColorExtension.swift in Sources */,
 				BB1EA1FF27C6A67C005E9BDD /* CarInfoBasicView.swift in Sources */,

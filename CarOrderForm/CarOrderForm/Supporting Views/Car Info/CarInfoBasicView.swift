@@ -12,8 +12,7 @@ struct CarInfoBasicView: View {
         VStack(alignment: .leading,spacing: 8){
             HStack{
                 Text("TESLA MODEL S")
-                    .fontWeight(.bold)
-                    .font(.custom("AvenirNextCondensed-Bold", size: 28))
+                    .customAvenir(font: .bold, size: 28)
                 Spacer()
                 Image(systemName: "info.circle")
                     .font(.system(size: 28))
