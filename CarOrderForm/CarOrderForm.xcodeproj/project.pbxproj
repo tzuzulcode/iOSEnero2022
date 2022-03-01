@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB08BB5027CE94EF001EA12D /* OrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB08BB4F27CE94EF001EA12D /* OrderView.swift */; };
 		BB1EA1EA27C6A486005E9BDD /* CarOrderFormApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1EA1E927C6A486005E9BDD /* CarOrderFormApp.swift */; };
 		BB1EA1EC27C6A486005E9BDD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1EA1EB27C6A486005E9BDD /* ContentView.swift */; };
 		BB1EA1EE27C6A487005E9BDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB1EA1ED27C6A487005E9BDD /* Assets.xcassets */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BB08BB4F27CE94EF001EA12D /* OrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderView.swift; sourceTree = "<group>"; };
 		BB1EA1E627C6A486005E9BDD /* CarOrderForm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarOrderForm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB1EA1E927C6A486005E9BDD /* CarOrderFormApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarOrderFormApp.swift; sourceTree = "<group>"; };
 		BB1EA1EB27C6A486005E9BDD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				BB1EA1EB27C6A486005E9BDD /* ContentView.swift */,
+				BB08BB4F27CE94EF001EA12D /* OrderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -252,6 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB24CD4627CD3A62003E0715 /* BottomOrderView.swift in Sources */,
+				BB08BB5027CE94EF001EA12D /* OrderView.swift in Sources */,
 				BB96BFC427C7FDDE00A64C52 /* FormView.swift in Sources */,
 				BB28BE4627C948CC00ED2460 /* PropertyViewModel.swift in Sources */,
 				BB1EA1EC27C6A486005E9BDD /* ContentView.swift in Sources */,

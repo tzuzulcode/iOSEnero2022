@@ -12,7 +12,7 @@ struct TopOrderView: View {
         VStack{
             closeButton
             carInfo
-        }
+        }.padding(20)
     }
     
     var closeButton: some View{
@@ -35,7 +35,7 @@ struct TopOrderView: View {
                 Spacer()
                 Image(systemName: "info.circle")
                     .resizable()
-                    .frame(width: 25, height: 25)
+                    .frame(width: 30, height: 30)
             }
             ZStack{
                 RoundedRectangle(cornerRadius: 20)

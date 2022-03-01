@@ -37,4 +37,6 @@ extension View {
 
 enum CustomFont:String{
     case bold = "AvenirNextCondensed-Bold"
+    case medium = "AvenirNextCondensed-Medium"
+    case ultraLight = "AvenirNextCondensed-UltraLight"
 }
