@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct CarOrderFormApp: App {
+    @StateObject private var order = OrderViewModel()
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(order)
         }
     }
 }

@@ -13,6 +13,8 @@ struct FormView: View {
     
     @State var saveForm:Bool = false
     
+    @EnvironmentObject var orderViewModel:OrderViewModel
+    
     
     var options = [0,1,2,3,4,5]
     
@@ -41,9 +43,9 @@ struct FormView: View {
     var rentalPeriod: some View{
         
         Section{
-            Picker(selection: $testProperties.option, label: Text("Rental period")){
-                ForEach(0..<options.count){
-                    Text("\(options[$0]) hours")
+            Picker(selection: $orderViewModel.rentalPeriod, label: Text("Rental period")){
+                ForEach(0..<orderViewModel.rentalPeriods.count){
+                    Text("\(orderViewModel.rentalPeriods[$0]) days")
                 }
             }
         }.listRowBackground(Color.baseGray)
@@ -51,9 +53,9 @@ struct FormView: View {
     var numberOfCars: some View{
         
         Section{
-            Picker(selection: $testProperties.option, label: Text("Number of cars")){
-                ForEach(0..<options.count){
-                    Text("\(options[$0]) hours")
+            Picker(selection: $orderViewModel.numberOfCars, label: Text("Number of cars")){
+                ForEach(0..<orderViewModel.numberOfCarsOptions.count){
+                    Text("\(orderViewModel.numberOfCarsOptions[$0]) cars")
                 }
             }
         }.listRowBackground(Color.baseGray)
@@ -61,9 +63,9 @@ struct FormView: View {
     var pickUpTime: some View{
         
         Section{
-            Picker(selection: $testProperties.option, label: Text("Pick-up time")){
-                ForEach(0..<options.count){
-                    Text("\(options[$0]) hours")
+            Picker(selection: $orderViewModel.pickUpTime, label: Text("Pick-up time")){
+                ForEach(0..<orderViewModel.pickUpTimes.count){
+                    Text("\(orderViewModel.pickUpTimes[$0]) minutes")
                 }
             }
         }.listRowBackground(Color.baseGray)
@@ -71,14 +73,14 @@ struct FormView: View {
     var location: some View{
         
         Section{
-            Picker(selection: $testProperties.option, label: Text("Pick-up location")){
-                ForEach(0..<options.count){
-                    Text("\(options[$0]) hours")
+            Picker(selection: $orderViewModel.pickUpLocation, label: Text("Pick-up location")){
+                ForEach(0..<orderViewModel.locations.count){
+                    Text(orderViewModel.locations[$0])
                 }
             }
-            Picker(selection: $testProperties.option, label: Text("Return location")){
-                ForEach(0..<options.count){
-                    Text("\(options[$0]) hours")
+            Picker(selection: $orderViewModel.returnLocation, label: Text("Return location")){
+                ForEach(0..<orderViewModel.locations.count){
+                    Text(orderViewModel.locations[$0])
                 }
             }
         }.listRowBackground(Color.baseGray)
@@ -86,7 +88,7 @@ struct FormView: View {
     var drivers: some View{
         
         Section{
-            Toggle(isOn: $testProperties.activo){
+            Toggle(isOn: $orderViewModel.specialDriver){
                 Text("Drivers")
             }.toggleStyle(SwitchToggleStyle(tint: Color.black))
         }.listRowBackground(Color.baseGray)
@@ -97,7 +99,7 @@ struct FormView: View {
             Section{
                 HStack(alignment:.center){
                     Spacer()
-                    Text("$160")
+                    Text("$\(orderViewModel.rentalPeriods[orderViewModel.rentalPeriod]*40*orderViewModel.numberOfCarsOptions[orderViewModel.numberOfCars])")
                         .fontWeight(.bold)
                         .font(.system(size: 40))
                     Spacer()
@@ -128,5 +130,6 @@ struct FormView: View {
 struct FormView_Previews: PreviewProvider {
     static var previews: some View {
         FormView()
+            .environmentObject(OrderViewModel())
     }
 }

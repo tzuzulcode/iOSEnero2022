@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct BottomOrderView: View {
+    
+    @EnvironmentObject var order: OrderViewModel
     var body: some View {
         VStack(spacing:20){
             info
@@ -19,21 +21,21 @@ struct BottomOrderView: View {
     var info: some View{
         HStack{
             HStack{
-                Text("1")
+                Text("\(order.numberOfCarsOptions[order.numberOfCars])")
                     .customAvenir(font: .medium, size: 22)
-                Text("car")
+                Text("cars")
                     .customAvenir(font: .ultraLight, size: 22)
             }
             Spacer()
             HStack{
-                Text("2")
+                Text("\(order.rentalPeriods[order.rentalPeriod])")
                     .customAvenir(font: .medium, size: 22)
-                Text("hours")
+                Text("days")
                     .customAvenir(font: .ultraLight, size: 22)
             }
             Spacer()
             HStack{
-                Text("$160")
+                Text("$\(order.rentalPeriods[order.rentalPeriod]*40*order.numberOfCarsOptions[order.numberOfCars])")
                     .customAvenir(font: .medium, size: 22)
             }
             
@@ -55,7 +57,7 @@ struct BottomOrderView: View {
                 HStack{
                     Text("The car will arrive in")
                         .customAvenir(font: .ultraLight, size: 22)
-                    Text("20 mins")
+                    Text("\(order.pickUpTimes[order.pickUpTime]) mins")
                         .customAvenir(font: .medium, size: 22)
                     
                 }
@@ -87,6 +89,6 @@ struct BottomOrderView: View {
 
 struct BottomOrderView_Previews: PreviewProvider {
     static var previews: some View {
-        BottomOrderView()
+        BottomOrderView().environmentObject(OrderViewModel())
     }
 }

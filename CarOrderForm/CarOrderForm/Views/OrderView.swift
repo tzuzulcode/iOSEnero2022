@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct OrderView: View {
+    
+    @EnvironmentObject var order: OrderViewModel
     var body: some View {
         ScrollView{
             VStack{
@@ -21,6 +23,6 @@ struct OrderView: View {
 
 struct OrderView_Previews: PreviewProvider {
     static var previews: some View {
-        OrderView()
+        OrderView().environmentObject(OrderViewModel())
     }
 }
