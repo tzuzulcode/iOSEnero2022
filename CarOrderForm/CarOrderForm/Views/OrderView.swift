@@ -14,7 +14,7 @@ struct OrderView: View {
                 TopOrderView()
                 BottomOrderView()
             }
-        }
+        }.navigationBarHidden(true)
         //.edgesIgnoringSafeArea(.all)
     }
 }

@@ -11,6 +11,8 @@ struct FormView: View {
     
     @StateObject var testProperties: TestProperties = TestProperties()
     
+    @State var saveForm:Bool = false
+    
     
     var options = [0,1,2,3,4,5]
     
@@ -21,14 +23,19 @@ struct FormView: View {
     }
     
     var body: some View {
-        Form{
-            rentalPeriod
-            numberOfCars
-            pickUpTime
-            location
-            drivers
-            orderComplete
-        }
+        VStack{
+            Form{
+                rentalPeriod
+                numberOfCars
+                pickUpTime
+                location
+                drivers
+                orderComplete
+                NavigationLink(destination: OrderView(),isActive: $saveForm){
+                    EmptyView()
+                }.hidden()
+            }
+        }.frame(minWidth:0,maxWidth: .infinity)
     }
     
     var rentalPeriod: some View{
@@ -98,7 +105,11 @@ struct FormView: View {
             }
             
             Section{
-                Button(action: {}){
+    
+                Button(action: {
+                    print("Action")
+                    self.saveForm = true
+                }){
                     Text("COMPLETE ORDER")
                         .font(.custom("AvenirNextCondensed-Bold", size: 23))
                         .fontWeight(.bold)
@@ -107,7 +118,6 @@ struct FormView: View {
                     .foregroundColor(.white)
                     .background(.black)
                     .cornerRadius(8)
-                    
             }
         }
     }

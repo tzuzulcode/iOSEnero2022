@@ -33,8 +33,6 @@ struct CarInfoView: View {
                 .padding(.horizontal,15)
         }.offset(y:90)
             .frame(height:650)
-        
-        
     }
 }
 

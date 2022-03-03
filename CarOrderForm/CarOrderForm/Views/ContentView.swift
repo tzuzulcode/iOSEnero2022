@@ -9,9 +9,16 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack{
-            OrderView()
-        }.foregroundColor(.black)
+        NavigationView{
+            ScrollView(.vertical){
+                VStack(spacing:0){
+                    CarInfoView()
+                        .padding(.horizontal,20)
+                    FormView()
+                        .frame(height:500)
+                }
+            }.navigationBarHidden(true)
+        }
     }
 }
 
