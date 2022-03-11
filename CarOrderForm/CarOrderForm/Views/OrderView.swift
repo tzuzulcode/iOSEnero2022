@@ -11,12 +11,17 @@ struct OrderView: View {
     
     @EnvironmentObject var order: OrderViewModel
     var body: some View {
-        ScrollView{
-            VStack{
-                TopOrderView()
-                BottomOrderView()
-            }
-        }.navigationBarHidden(true)
+        ZStack{
+            ScrollView{
+                VStack{
+                    TopOrderView()
+                    BottomOrderView()
+                }
+            }.navigationBarHidden(true)
+            CancelOrderView()
+                .opacity(order.isModalVisible ? 1 : 0)
+                .animation(.default)
+        }
         //.edgesIgnoringSafeArea(.all)
     }
 }

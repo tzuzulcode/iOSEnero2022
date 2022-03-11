@@ -10,14 +10,11 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         NavigationView{
-            ScrollView(.vertical){
-                VStack(spacing:0){
-                    CarInfoView()
-                        .padding(.horizontal,20)
-                    FormView()
-                        .frame(height:500)
+            VStack{
+                NavigationLink(destination: OrderDetailsView()){
+                    Text("Ir a detalles")
                 }
-            }.navigationBarHidden(true)
+            }
         }
     }
 }

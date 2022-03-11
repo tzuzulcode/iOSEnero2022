@@ -17,7 +17,7 @@ struct TopOrderView: View {
     
     var closeButton: some View{
         HStack{
-            Button(action:{}){
+            NavigationLink(destination: ContentView().navigationBarHidden(true)){
                 Image(systemName: "xmark")
                     .resizable()
                     .frame(width: 25, height: 25)

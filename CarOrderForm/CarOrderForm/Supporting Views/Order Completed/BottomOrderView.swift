@@ -74,7 +74,9 @@ struct BottomOrderView: View {
     }
     
     var button:some View{
-        Button(action: {}){
+        Button(action: {
+            order.isModalVisible = true
+        }){
             Text("CANCEL ORDER")
         }.frame(height:55)
             .frame(minWidth: 0, maxWidth: .infinity)

@@ -11,8 +11,6 @@ struct FormView: View {
     
     @StateObject var testProperties: TestProperties = TestProperties()
     
-    @State var saveForm:Bool = false
-    
     @EnvironmentObject var orderViewModel:OrderViewModel
     
     
@@ -33,7 +31,7 @@ struct FormView: View {
                 location
                 drivers
                 orderComplete
-                NavigationLink(destination: OrderView(),isActive: $saveForm){
+                NavigationLink(destination: OrderView(),isActive: $orderViewModel.isOrderCompleted){
                     EmptyView()
                 }.hidden()
             }
@@ -107,19 +105,22 @@ struct FormView: View {
             }
             
             Section{
+                NavigationLink(destination: OrderView().navigationBarHidden(true),isActive: $orderViewModel.isOrderCompleted){
+                    Button(action: {
+                        print("Creando orden...")
+                        orderViewModel.createOrder()
+                    }){
+                        Text("COMPLETE ORDER")
+                            .font(.custom("AvenirNextCondensed-Bold", size: 23))
+                            .fontWeight(.bold)
+                    }.frame(minWidth: 0, maxWidth: .infinity)
+                        .frame(height:40)
+                        .foregroundColor(.white)
+                        .background(.black)
+                        .cornerRadius(8)
+                }
     
-                Button(action: {
-                    print("Action")
-                    self.saveForm = true
-                }){
-                    Text("COMPLETE ORDER")
-                        .font(.custom("AvenirNextCondensed-Bold", size: 23))
-                        .fontWeight(.bold)
-                }.frame(minWidth: 0, maxWidth: .infinity)
-                    .frame(height:40)
-                    .foregroundColor(.white)
-                    .background(.black)
-                    .cornerRadius(8)
+                
             }
         }
     }

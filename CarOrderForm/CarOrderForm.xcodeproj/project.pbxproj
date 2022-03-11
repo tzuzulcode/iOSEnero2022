@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		BB08BB5027CE94EF001EA12D /* OrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB08BB4F27CE94EF001EA12D /* OrderView.swift */; };
+		BB1D5DC827D916F700D4FD71 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1D5DC727D916F700D4FD71 /* API.swift */; };
+		BB1E7B3D27D675B700F9F488 /* CancelOrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1E7B3C27D675B700F9F488 /* CancelOrderView.swift */; };
+		BB1E7B3F27D67A6800F9F488 /* CancelModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1E7B3E27D67A6800F9F488 /* CancelModalView.swift */; };
+		BB1E7B4127D67CC900F9F488 /* CustomButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1E7B4027D67CC900F9F488 /* CustomButtonStyle.swift */; };
+		BB1E7B4327D6815B00F9F488 /* BlurBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1E7B4227D6815B00F9F488 /* BlurBackground.swift */; };
 		BB1EA1EA27C6A486005E9BDD /* CarOrderFormApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1EA1E927C6A486005E9BDD /* CarOrderFormApp.swift */; };
 		BB1EA1EC27C6A486005E9BDD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1EA1EB27C6A486005E9BDD /* ContentView.swift */; };
 		BB1EA1EE27C6A487005E9BDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB1EA1ED27C6A487005E9BDD /* Assets.xcassets */; };
@@ -23,10 +28,16 @@
 		BB42B3E827D12EA40039DF17 /* OrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB42B3E727D12EA40039DF17 /* OrderViewModel.swift */; };
 		BB96BFC227C7FB2900A64C52 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB96BFC127C7FB2800A64C52 /* ColorExtension.swift */; };
 		BB96BFC427C7FDDE00A64C52 /* FormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB96BFC327C7FDDE00A64C52 /* FormView.swift */; };
+		BBD0494F27D7C4F000CE0E34 /* OrderDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD0494E27D7C4F000CE0E34 /* OrderDetailsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BB08BB4F27CE94EF001EA12D /* OrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderView.swift; sourceTree = "<group>"; };
+		BB1D5DC727D916F700D4FD71 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		BB1E7B3C27D675B700F9F488 /* CancelOrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelOrderView.swift; sourceTree = "<group>"; };
+		BB1E7B3E27D67A6800F9F488 /* CancelModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelModalView.swift; sourceTree = "<group>"; };
+		BB1E7B4027D67CC900F9F488 /* CustomButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonStyle.swift; sourceTree = "<group>"; };
+		BB1E7B4227D6815B00F9F488 /* BlurBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurBackground.swift; sourceTree = "<group>"; };
 		BB1EA1E627C6A486005E9BDD /* CarOrderForm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarOrderForm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB1EA1E927C6A486005E9BDD /* CarOrderFormApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarOrderFormApp.swift; sourceTree = "<group>"; };
 		BB1EA1EB27C6A486005E9BDD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -49,6 +60,7 @@
 		BB42B3E727D12EA40039DF17 /* OrderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewModel.swift; sourceTree = "<group>"; };
 		BB96BFC127C7FB2800A64C52 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		BB96BFC327C7FDDE00A64C52 /* FormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormView.swift; sourceTree = "<group>"; };
+		BBD0494E27D7C4F000CE0E34 /* OrderDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +74,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BB1E7B3B27D6758800F9F488 /* Cancel Order */ = {
+			isa = PBXGroup;
+			children = (
+				BB1E7B3C27D675B700F9F488 /* CancelOrderView.swift */,
+				BB1E7B3E27D67A6800F9F488 /* CancelModalView.swift */,
+			);
+			path = "Cancel Order";
+			sourceTree = "<group>";
+		};
 		BB1EA1DD27C6A486005E9BDD = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +126,7 @@
 			children = (
 				BB1EA1EB27C6A486005E9BDD /* ContentView.swift */,
 				BB08BB4F27CE94EF001EA12D /* OrderView.swift */,
+				BBD0494E27D7C4F000CE0E34 /* OrderDetailsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -112,6 +134,7 @@
 		BB1EA1F827C6A519005E9BDD /* Supporting Views */ = {
 			isa = PBXGroup;
 			children = (
+				BB1E7B3B27D6758800F9F488 /* Cancel Order */,
 				BB24CD4227CD3A35003E0715 /* Order Completed */,
 				BB1EA20B27C6AFC2005E9BDD /* CarInfoView.swift */,
 				BB1EA1FD27C6A637005E9BDD /* Car Info */,
@@ -126,6 +149,8 @@
 				BB1EA20027C6AACD005E9BDD /* Font */,
 				BB96BFC127C7FB2800A64C52 /* ColorExtension.swift */,
 				BB24CD4727CD3E9B003E0715 /* Font.swift */,
+				BB1E7B4027D67CC900F9F488 /* CustomButtonStyle.swift */,
+				BB1E7B4227D6815B00F9F488 /* BlurBackground.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -142,6 +167,7 @@
 		BB1EA1FB27C6A567005E9BDD /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				BB1D5DC727D916F700D4FD71 /* API.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -260,16 +286,22 @@
 				BB24CD4627CD3A62003E0715 /* BottomOrderView.swift in Sources */,
 				BB08BB5027CE94EF001EA12D /* OrderView.swift in Sources */,
 				BB96BFC427C7FDDE00A64C52 /* FormView.swift in Sources */,
+				BB1E7B4127D67CC900F9F488 /* CustomButtonStyle.swift in Sources */,
 				BB28BE4627C948CC00ED2460 /* PropertyViewModel.swift in Sources */,
 				BB1EA1EC27C6A486005E9BDD /* ContentView.swift in Sources */,
 				BB42B3E827D12EA40039DF17 /* OrderViewModel.swift in Sources */,
 				BB24CD4427CD3A54003E0715 /* TopOrderView.swift in Sources */,
+				BB1E7B4327D6815B00F9F488 /* BlurBackground.swift in Sources */,
 				BB1EA20A27C6AE11005E9BDD /* CarInfoPhotosView.swift in Sources */,
+				BBD0494F27D7C4F000CE0E34 /* OrderDetailsView.swift in Sources */,
 				BB1EA1EA27C6A486005E9BDD /* CarOrderFormApp.swift in Sources */,
 				BB1EA20C27C6AFC2005E9BDD /* CarInfoView.swift in Sources */,
+				BB1E7B3D27D675B700F9F488 /* CancelOrderView.swift in Sources */,
+				BB1D5DC827D916F700D4FD71 /* API.swift in Sources */,
 				BB24CD4827CD3E9B003E0715 /* Font.swift in Sources */,
 				BB1EA20827C6ACD1005E9BDD /* CarInfoDetailsView.swift in Sources */,
 				BB96BFC227C7FB2900A64C52 /* ColorExtension.swift in Sources */,
+				BB1E7B3F27D67A6800F9F488 /* CancelModalView.swift in Sources */,
 				BB1EA1FF27C6A67C005E9BDD /* CarInfoBasicView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
