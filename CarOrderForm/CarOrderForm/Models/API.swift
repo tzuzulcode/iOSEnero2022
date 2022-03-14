@@ -56,7 +56,6 @@ struct API{
     func post(with order:OrderViewModel)->AnyPublisher<OrderViewModel,Error>{
         URLSession.shared.dataTaskPublisher(for: EndPoint.request(with: EndPoint.post.url, and: order))
             .map{
-                print($0)
                 return $0.data
             }
             .decode(type: OrderViewModel.self, decoder: decoder)
@@ -66,13 +65,10 @@ struct API{
                     //COmpletar tipo de error
                     return Error.addressUnreachable(EndPoint.post.url)
                 default:
-                    print("ERROR:")
-                    print(error)
                     return Error.invalidResponse
                 }
                 
             }
-            .print()
             .map{
                 return $0
             }

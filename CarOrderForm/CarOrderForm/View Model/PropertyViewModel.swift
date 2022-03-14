@@ -9,5 +9,5 @@ import Foundation
 
 class TestProperties:ObservableObject{
     @Published var option = 0
-    @Published var activo = true
+    @Published var activo = false
 }

@@ -35,7 +35,7 @@ class OrderViewModel: ObservableObject,Codable{
     @Published var specialDriver = false
     
     @Published var isModalVisible = false
-    @Published var isOrderCompleted = false
+    @Published var isOrderCompleted:Bool = false
     @Published var username = "tzuzul"
     
     let rentalPeriods = Array(1..<10)
@@ -62,10 +62,6 @@ class OrderViewModel: ObservableObject,Codable{
         specialDriver = try attributesContainer.decode(Bool.self, forKey: .specialDriver)
         username = try attributesContainer.decode(String.self, forKey: .username)
         isOrderCompleted = try attributesContainer.decode(Bool.self, forKey: .completed)
-        
-        print("Order completed")
-        print(isOrderCompleted)
-        
     }
     
     
@@ -105,10 +101,8 @@ class OrderViewModel: ObservableObject,Codable{
                 print(response)
             }, receiveValue: { value in
                 print("Response from combine publisher:")
-                print(value)
+                self.isOrderCompleted = value.isOrderCompleted
             })
             .store(in: &subscriptions)
-        
-        print(subscriptions)
     }
 }
