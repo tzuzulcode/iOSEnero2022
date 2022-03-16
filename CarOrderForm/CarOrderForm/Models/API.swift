@@ -31,12 +31,16 @@ struct API{
         static let base = URL(string: "http://localhost:1337")!
         
         case post
+        case getCars
         var url:URL{
             switch self{
             case.post:
                 return EndPoint.base.appendingPathComponent("/api/orders")
+            case.getCars:
+                return EndPoint.base.appendingPathComponent("/api/cars?populate=*")
             }
         }
+        
         static func request(with url:URL, and order:OrderViewModel)->URLRequest{
             guard let encoded = try? JSONEncoder().encode(order)else{
                 fatalError("Invalid ViewModel")
@@ -51,6 +55,8 @@ struct API{
             return request
         }
     }
+    
+    
     private let decoder = JSONDecoder()
     
     func post(with order:OrderViewModel)->AnyPublisher<OrderViewModel,Error>{
@@ -64,6 +70,32 @@ struct API{
                 case is URLError:
                     //COmpletar tipo de error
                     return Error.addressUnreachable(EndPoint.post.url)
+                default:
+                    return Error.invalidResponse
+                }
+                
+            }
+            .map{
+                return $0
+            }
+            .eraseToAnyPublisher()
+    }
+    
+    func get(with cars:CarsViewModel)->AnyPublisher<CarsViewModel,Error>{
+        
+        var request:URLRequest = URLRequest(url:EndPoint.getCars.url)
+        request.httpMethod = "GET"
+        
+        URLSession.shared.dataTaskPublisher(for: request)
+            .map{
+                return $0.data
+            }
+            .decode(type: CarsViewModel.self, decoder: decoder)
+            .mapError{ error in
+                switch error{
+                case is URLError:
+                    //COmpletar tipo de error
+                    return Error.addressUnreachable(EndPoint.getCars.url)
                 default:
                     return Error.invalidResponse
                 }

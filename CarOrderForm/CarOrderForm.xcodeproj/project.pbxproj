@@ -29,6 +29,8 @@
 		BB96BFC227C7FB2900A64C52 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB96BFC127C7FB2800A64C52 /* ColorExtension.swift */; };
 		BB96BFC427C7FDDE00A64C52 /* FormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB96BFC327C7FDDE00A64C52 /* FormView.swift */; };
 		BBD0494F27D7C4F000CE0E34 /* OrderDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD0494E27D7C4F000CE0E34 /* OrderDetailsView.swift */; };
+		BBD26EBD27E106B000912F6C /* CarsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD26EBC27E106B000912F6C /* CarsViewModel.swift */; };
+		BBD26EBF27E106DD00912F6C /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD26EBE27E106DD00912F6C /* Car.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +63,8 @@
 		BB96BFC127C7FB2800A64C52 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		BB96BFC327C7FDDE00A64C52 /* FormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormView.swift; sourceTree = "<group>"; };
 		BBD0494E27D7C4F000CE0E34 /* OrderDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailsView.swift; sourceTree = "<group>"; };
+		BBD26EBC27E106B000912F6C /* CarsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsViewModel.swift; sourceTree = "<group>"; };
+		BBD26EBE27E106DD00912F6C /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +164,7 @@
 			children = (
 				BB28BE4527C948CC00ED2460 /* PropertyViewModel.swift */,
 				BB42B3E727D12EA40039DF17 /* OrderViewModel.swift */,
+				BBD26EBC27E106B000912F6C /* CarsViewModel.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -168,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				BB1D5DC727D916F700D4FD71 /* API.swift */,
+				BBD26EBE27E106DD00912F6C /* Car.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -290,6 +296,7 @@
 				BB28BE4627C948CC00ED2460 /* PropertyViewModel.swift in Sources */,
 				BB1EA1EC27C6A486005E9BDD /* ContentView.swift in Sources */,
 				BB42B3E827D12EA40039DF17 /* OrderViewModel.swift in Sources */,
+				BBD26EBD27E106B000912F6C /* CarsViewModel.swift in Sources */,
 				BB24CD4427CD3A54003E0715 /* TopOrderView.swift in Sources */,
 				BB1E7B4327D6815B00F9F488 /* BlurBackground.swift in Sources */,
 				BB1EA20A27C6AE11005E9BDD /* CarInfoPhotosView.swift in Sources */,
@@ -300,6 +307,7 @@
 				BB1D5DC827D916F700D4FD71 /* API.swift in Sources */,
 				BB24CD4827CD3E9B003E0715 /* Font.swift in Sources */,
 				BB1EA20827C6ACD1005E9BDD /* CarInfoDetailsView.swift in Sources */,
+				BBD26EBF27E106DD00912F6C /* Car.swift in Sources */,
 				BB96BFC227C7FB2900A64C52 /* ColorExtension.swift in Sources */,
 				BB1E7B3F27D67A6800F9F488 /* CancelModalView.swift in Sources */,
 				BB1EA1FF27C6A67C005E9BDD /* CarInfoBasicView.swift in Sources */,
