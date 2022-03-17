@@ -37,7 +37,12 @@ struct API{
             case.post:
                 return EndPoint.base.appendingPathComponent("/api/orders")
             case.getCars:
-                return EndPoint.base.appendingPathComponent("/api/cars?populate=*")
+                var urlComponent = URLComponents(string:EndPoint.base.appendingPathComponent("/api/cars").absoluteString)
+                
+                let populate = URLQueryItem(name: "populate", value: "*")
+                urlComponent?.queryItems=[populate]
+                
+                return urlComponent?.url ?? EndPoint.base.appendingPathComponent("/api/cars")
             }
         }
         
@@ -51,6 +56,13 @@ struct API{
             request.setValue("application/json", forHTTPHeaderField: "Content-Type")
             request.httpMethod = "POST"
             request.httpBody = encoded
+            
+            return request
+        }
+        
+        static func getRequest(with url:URL)->URLRequest{
+            var request:URLRequest = URLRequest(url:EndPoint.getCars.url)
+            request.httpMethod = "GET"
             
             return request
         }
@@ -81,12 +93,10 @@ struct API{
             .eraseToAnyPublisher()
     }
     
-    func get(with cars:CarsViewModel)->AnyPublisher<CarsViewModel,Error>{
+    
+    func get()->AnyPublisher<CarsViewModel,Error>{
         
-        var request:URLRequest = URLRequest(url:EndPoint.getCars.url)
-        request.httpMethod = "GET"
-        
-        URLSession.shared.dataTaskPublisher(for: request)
+        URLSession.shared.dataTaskPublisher(for: EndPoint.getRequest(with: EndPoint.getCars.url))
             .map{
                 return $0.data
             }
@@ -95,11 +105,12 @@ struct API{
                 switch error{
                 case is URLError:
                     //COmpletar tipo de error
+                    print(error)
                     return Error.addressUnreachable(EndPoint.getCars.url)
                 default:
+                    print(error)
                     return Error.invalidResponse
                 }
-                
             }
             .map{
                 return $0

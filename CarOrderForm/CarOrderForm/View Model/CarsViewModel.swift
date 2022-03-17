@@ -6,15 +6,25 @@
 //
 
 import Foundation
+import Combine
 
-class CarsViewModel:Codable{
+class CarsViewModel:ObservableObject,Decodable{
     
     @Published var cars:[Car] = []
+    private var subscriptions = Set<AnyCancellable>()
     
     
     private let api = API()
     func getCars(){
-        self.api.get(with: self)
+        self.api.get()
+            .receive(on: DispatchQueue.main)
+            .sink(receiveCompletion: { response in
+                print("RESPONSE:")
+                print(response)
+            }, receiveValue: { value in
+                self.cars = value.cars
+            })
+            .store(in: &subscriptions)
     }
     
     init(){
@@ -32,10 +42,5 @@ class CarsViewModel:Codable{
     }
     enum AttributeKeys:String,CodingKey{
         case attributes
-    }
-
-    
-    func encode(to encoder: Encoder) throws {
-        var container = encoder.container(keyedBy: CodingKeys.self)
     }
 }

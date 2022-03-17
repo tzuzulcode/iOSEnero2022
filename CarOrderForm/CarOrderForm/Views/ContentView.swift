@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @EnvironmentObject var cars: CarsViewModel
+    
     var body: some View {
         NavigationView{
             VStack{
@@ -15,6 +18,9 @@ struct ContentView: View {
                     Text("Ir a detalles")
                 }
             }
+        }.onAppear(){
+            print("Appeared")
+            cars.getCars()
         }
     }
 }
@@ -22,5 +28,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environmentObject(CarsViewModel())
     }
 }

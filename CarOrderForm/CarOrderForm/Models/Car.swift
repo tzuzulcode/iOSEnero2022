@@ -59,11 +59,10 @@ class Car:Decodable{
         
         var galleryImages = try galleryContainer.nestedUnkeyedContainer(forKey: .data)
         
-        var galleryImage:KeyedDecodingContainer<DataKeys>
         
         while !galleryImages.isAtEnd{
-            galleryImage = try galleryImages.nestedContainer(keyedBy: DataKeys.self)
-            let galleryImageAtributes = try galleryImages.nestedContainer(keyedBy: ImageAttributes.self)
+            let galleryImage = try galleryImages.nestedContainer(keyedBy: DataKeys.self)
+            let galleryImageAtributes = try galleryImage.nestedContainer(keyedBy: ImageAttributes.self,forKey: .attributes)
             let galleryImageUrl = try galleryImageAtributes.decode(String.self, forKey: .url)
             gallery.append(galleryImageUrl)
         }
