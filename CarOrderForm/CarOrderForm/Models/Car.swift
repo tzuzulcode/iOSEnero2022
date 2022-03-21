@@ -7,19 +7,21 @@
 
 import Foundation
 
-class Car:Decodable{
-    let model:String
-    let price:Int
-    let transmission:String
-    let classType:String
-    let year:Int
+class Car:Decodable,Identifiable,ObservableObject{
+    let id = UUID()
+    
+    @Published var model:String
+    @Published var price:Int
+    @Published var transmission:String
+    @Published var classType:String
+    @Published var year:Int
     
     //Images
-    var car:String = ""
-    var logo:String = ""
-    var logoBack:String = ""
+    @Published var car:String = ""
+    @Published var logo:String = ""
+    @Published var logoBack:String = ""
     
-    var gallery:[String] = []
+    @Published var gallery:[String] = []
     
     enum CodingKeys:String,CodingKey{
         case data
@@ -34,6 +36,14 @@ class Car:Decodable{
     }
     enum ImageAttributes:String,CodingKey{
         case url
+    }
+    
+    init(){
+        model = "Test"
+        price = 40
+        transmission = "Automatic"
+        classType = "Luxury"
+        year = 2022
     }
     
     required init(from decoder: Decoder) throws {

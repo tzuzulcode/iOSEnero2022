@@ -8,17 +8,20 @@
 import SwiftUI
 
 struct CarInfoBasicView: View {
+    
+    @EnvironmentObject var car:Car
+    
     var body: some View {
         VStack(alignment: .leading,spacing: 8){
             HStack{
-                Text("TESLA MODEL S")
+                Text(car.model)
                     .customAvenir(font: .bold, size: 28)
                 Spacer()
                 Image(systemName: "info.circle")
                     .font(.system(size: 28))
             }
             VStack (alignment: .leading,spacing: 4){
-                Text("$80/hr")
+                Text("$\(car.price)/hr")
                     .fontWeight(.medium)
                     .foregroundColor(.gray)
                 HStack{
@@ -34,6 +37,7 @@ struct CarInfoBasicView: View {
 struct CarInfoBasicView_Previews: PreviewProvider {
     static var previews: some View {
         CarInfoBasicView()
+            .environmentObject(Car())
             .previewLayout(.fixed(width: 400, height: 100))
     }
 }

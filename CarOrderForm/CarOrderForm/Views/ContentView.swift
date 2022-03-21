@@ -13,14 +13,32 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView{
-            VStack{
-                NavigationLink(destination: OrderDetailsView()){
-                    Text("Ir a detalles")
-                }
+            List(cars.cars){ car in
+                CarDetail(car: car)
             }
         }.onAppear(){
             print("Appeared")
             cars.getCars()
+        }
+    }
+}
+
+struct CarDetail: View{
+    var car: Car
+    
+    var body: some View{
+        NavigationLink(destination: OrderDetailsView().environmentObject(car)){
+            VStack{
+                Text(car.model)
+                    .customAvenir(font: .bold, size: 28)
+                Text("\(car.price)")
+                AsyncImage(url: URL(string: "http://localhost:1337"+car.car)){image in
+                    image.resizable()
+                        .scaledToFit()
+                }placeholder: {
+                    Rectangle()
+                }
+            }
         }
     }
 }

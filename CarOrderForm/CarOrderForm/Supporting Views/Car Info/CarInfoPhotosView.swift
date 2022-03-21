@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct CarInfoPhotosView: View {
+    @EnvironmentObject var car:Car
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 10){
             Text("Car Interior")
@@ -15,12 +17,12 @@ struct CarInfoPhotosView: View {
                 .font(.system(size: 22))
                 .foregroundColor(.gray)
             HStack{
-                Image("pic1")
-                    .frame(width: 180, height: 100)
-                    .cornerRadius(10)
-                Image("pic2")
-                    .frame(width: 180, height: 100)
-                    .cornerRadius(10)
+                
+                ForEach(car.gallery,id: \.self){image in
+                    AsyncImage(url: URL(string: "http://localhost:1337"+image))
+                        .frame(width: 180, height: 100)
+                        .cornerRadius(10)
+                }
             }
         }
     }
@@ -29,6 +31,7 @@ struct CarInfoPhotosView: View {
 struct CarInfoPhotosView_Previews: PreviewProvider {
     static var previews: some View {
         CarInfoPhotosView()
+            .environmentObject(Car())
             .previewLayout(.fixed(width: 400, height: 150))
     }
 }

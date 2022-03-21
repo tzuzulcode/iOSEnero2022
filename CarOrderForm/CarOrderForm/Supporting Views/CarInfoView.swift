@@ -9,6 +9,8 @@ import SwiftUI
 
 struct CarInfoView: View {
     
+    @EnvironmentObject var car:Car
+    
     var body: some View {
         
         ZStack{
@@ -17,11 +19,9 @@ struct CarInfoView: View {
                 .frame(height: 450)
             VStack{
                 VStack{
-                    Image("tesla-logo")
-                        .offset(y:120)
-                    Image("tesla-s")
-                    Image("tesla-text-logo")
-                        .offset(y:-12)
+                    AsyncImage(url: URL(string: "http://localhost:1337"+car.logoBack)).offset(y:120)
+                    AsyncImage(url: URL(string: "http://localhost:1337"+car.car))
+                    AsyncImage(url: URL(string: "http://localhost:1337"+car.logo)).offset(y:-12)
                 }
                 
                 VStack{
@@ -38,6 +38,6 @@ struct CarInfoView: View {
 
 struct CarInfoView_Previews: PreviewProvider {
     static var previews: some View {
-        CarInfoView()
+        CarInfoView().environmentObject(Car())
     }
 }
