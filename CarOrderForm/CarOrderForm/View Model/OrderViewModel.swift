@@ -8,24 +8,6 @@
 import Foundation
 import Combine
 
-class SendData:Encodable{
-    let rentalPeriod:Int
-    let numberOfCars:Int
-    let pickUpLocation:Int
-    let returnLocation:Int
-    let specialDriver:Bool
-    let username:String
-    
-    init(_ rentalPeriod:Int,_ numberOfCars:Int,_ pickUpLocation:Int,_ returnLocation:Int,_ specialDriver:Bool,_ username:String){
-        self.rentalPeriod = rentalPeriod
-        self.numberOfCars = numberOfCars
-        self.pickUpLocation = pickUpLocation
-        self.returnLocation = returnLocation
-        self.specialDriver = specialDriver
-        self.username = username
-    }
-}
-
 class OrderViewModel: ObservableObject,Codable{
     @Published var rentalPeriod = 0
     @Published var numberOfCars = 0
@@ -37,6 +19,8 @@ class OrderViewModel: ObservableObject,Codable{
     @Published var isModalVisible = false
     @Published var isOrderCompleted:Bool = false
     @Published var username = "tzuzul"
+    
+    var idOrder = 0
     
     let rentalPeriods = Array(1..<10)
     let numberOfCarsOptions = Array(1..<4)
@@ -53,6 +37,10 @@ class OrderViewModel: ObservableObject,Codable{
     required init(from decoder: Decoder) throws {
         let response = try decoder.container(keyedBy: CodingKeys.self)
         let dataContainer = try response.nestedContainer(keyedBy: AttributesKeys.self, forKey: .data)
+        
+        idOrder = try dataContainer.decode(Int.self, forKey: .id)
+        
+        
         let attributesContainer = try dataContainer.nestedContainer(keyedBy: DataKeys.self, forKey: .attributes)
         
         rentalPeriod = try attributesContainer.decode(Int.self, forKey: .rentalPeriod)
@@ -62,6 +50,7 @@ class OrderViewModel: ObservableObject,Codable{
         specialDriver = try attributesContainer.decode(Bool.self, forKey: .specialDriver)
         username = try attributesContainer.decode(String.self, forKey: .username)
         isOrderCompleted = try attributesContainer.decode(Bool.self, forKey: .completed)
+       
     }
     
     
@@ -70,11 +59,11 @@ class OrderViewModel: ObservableObject,Codable{
     }
     
     enum DataKeys:String,CodingKey{
-        case rentalPeriod,numberOfCars,pickUpLocation,returnLocation,specialDriver,username,completed
+        case rentalPeriod,numberOfCars,pickUpLocation,returnLocation,specialDriver,username,completed,id
     }
     
     enum AttributesKeys:String,CodingKey{
-        case attributes
+        case attributes,id
     }
 
     
@@ -102,6 +91,22 @@ class OrderViewModel: ObservableObject,Codable{
             }, receiveValue: { value in
                 print("Response from combine publisher:")
                 self.isOrderCompleted = value.isOrderCompleted
+                self.idOrder = value.idOrder
+            })
+            .store(in: &subscriptions)
+    }
+    
+    
+    func cancelOrder(){
+        api.delete(with: self)
+            .receive(on: DispatchQueue.main)
+            .sink(receiveCompletion: { response in
+                print("RESPONSE:")
+                print(response)
+            }, receiveValue: { value in
+                print("Response from combine publisher:")
+                self.isOrderCompleted = false
+                self.idOrder = 0
             })
             .store(in: &subscriptions)
     }

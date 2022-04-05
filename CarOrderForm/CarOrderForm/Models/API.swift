@@ -32,17 +32,21 @@ struct API{
         
         case post
         case getCars
+        case del(id:Int)
         var url:URL{
             switch self{
-            case.post:
-                return EndPoint.base.appendingPathComponent("/api/orders")
-            case.getCars:
+            case .getCars:
                 var urlComponent = URLComponents(string:EndPoint.base.appendingPathComponent("/api/cars").absoluteString)
                 
                 let populate = URLQueryItem(name: "populate", value: "*")
                 urlComponent?.queryItems=[populate]
                 
                 return urlComponent?.url ?? EndPoint.base.appendingPathComponent("/api/cars")
+            case .post:
+                return EndPoint.base.appendingPathComponent("/api/orders")
+            case .del(let id):
+                return EndPoint.base.appendingPathComponent("/api/orders/\(id)")
+            
             }
         }
         
@@ -60,9 +64,10 @@ struct API{
             return request
         }
         
-        static func getRequest(with url:URL)->URLRequest{
-            var request:URLRequest = URLRequest(url:EndPoint.getCars.url)
-            request.httpMethod = "GET"
+        static func deleteRequest(with url:URL)->URLRequest{
+            var request:URLRequest = URLRequest(url: url)
+            request.httpMethod = "DELETE"
+            
             
             return request
         }
@@ -70,6 +75,33 @@ struct API{
     
     
     private let decoder = JSONDecoder()
+    
+    
+    func get()->AnyPublisher<CarsViewModel,Error>{
+        
+        let request:URLRequest = URLRequest(url:EndPoint.getCars.url)
+        
+        return URLSession.shared.dataTaskPublisher(for: request)
+            .map{
+                return $0.data
+            }
+            .decode(type: CarsViewModel.self, decoder: decoder)
+            .mapError{ error in
+                switch error{
+                case is URLError:
+                    //COmpletar tipo de error
+                    print(error)
+                    return Error.addressUnreachable(EndPoint.getCars.url)
+                default:
+                    print(error)
+                    return Error.invalidResponse
+                }
+            }
+            .map{
+                return $0
+            }
+            .eraseToAnyPublisher()
+    }
     
     func post(with order:OrderViewModel)->AnyPublisher<OrderViewModel,Error>{
         URLSession.shared.dataTaskPublisher(for: EndPoint.request(with: EndPoint.post.url, and: order))
@@ -93,28 +125,29 @@ struct API{
             .eraseToAnyPublisher()
     }
     
-    
-    func get()->AnyPublisher<CarsViewModel,Error>{
-        
-        URLSession.shared.dataTaskPublisher(for: EndPoint.getRequest(with: EndPoint.getCars.url))
+    //Metodo put nos permite actualizar data de una API
+    func delete(with order:OrderViewModel)->AnyPublisher<OrderViewModel,Error>{
+        URLSession.shared.dataTaskPublisher(for: EndPoint.deleteRequest(with: EndPoint.del(id: order.idOrder).url))
             .map{
                 return $0.data
             }
-            .decode(type: CarsViewModel.self, decoder: decoder)
+            .decode(type: OrderViewModel.self, decoder: decoder)
             .mapError{ error in
                 switch error{
                 case is URLError:
                     //COmpletar tipo de error
-                    print(error)
-                    return Error.addressUnreachable(EndPoint.getCars.url)
+                    return Error.addressUnreachable(EndPoint.post.url)
                 default:
-                    print(error)
                     return Error.invalidResponse
                 }
+                
             }
             .map{
                 return $0
             }
             .eraseToAnyPublisher()
     }
+    
+    
+    
 }

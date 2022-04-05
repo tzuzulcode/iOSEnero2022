@@ -54,6 +54,7 @@ struct CancelModalView: View {
                 Button(action:{
                     order.isModalVisible=false
                     active=true
+                    order.cancelOrder()
                 }){
                     Text("YES, CANCEL")
                 }.buttonStyle(CustomButtonStyle())

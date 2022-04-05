@@ -15,7 +15,7 @@ struct ContentView: View {
         NavigationView{
             List(cars.cars){ car in
                 CarDetail(car: car)
-            }
+            }.navigationBarHidden(true)
         }.onAppear(){
             print("Appeared")
             cars.getCars()

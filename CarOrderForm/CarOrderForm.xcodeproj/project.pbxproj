@@ -25,6 +25,7 @@
 		BB24CD4627CD3A62003E0715 /* BottomOrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB24CD4527CD3A62003E0715 /* BottomOrderView.swift */; };
 		BB24CD4827CD3E9B003E0715 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB24CD4727CD3E9B003E0715 /* Font.swift */; };
 		BB28BE4627C948CC00ED2460 /* PropertyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB28BE4527C948CC00ED2460 /* PropertyViewModel.swift */; };
+		BB36388727EA3B77004B72CB /* CloseButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB36388627EA3B77004B72CB /* CloseButtonView.swift */; };
 		BB42B3E827D12EA40039DF17 /* OrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB42B3E727D12EA40039DF17 /* OrderViewModel.swift */; };
 		BB96BFC227C7FB2900A64C52 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB96BFC127C7FB2800A64C52 /* ColorExtension.swift */; };
 		BB96BFC427C7FDDE00A64C52 /* FormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB96BFC327C7FDDE00A64C52 /* FormView.swift */; };
@@ -59,6 +60,7 @@
 		BB24CD4527CD3A62003E0715 /* BottomOrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomOrderView.swift; sourceTree = "<group>"; };
 		BB24CD4727CD3E9B003E0715 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		BB28BE4527C948CC00ED2460 /* PropertyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyViewModel.swift; sourceTree = "<group>"; };
+		BB36388627EA3B77004B72CB /* CloseButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButtonView.swift; sourceTree = "<group>"; };
 		BB42B3E727D12EA40039DF17 /* OrderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewModel.swift; sourceTree = "<group>"; };
 		BB96BFC127C7FB2800A64C52 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		BB96BFC327C7FDDE00A64C52 /* FormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormView.swift; sourceTree = "<group>"; };
@@ -215,6 +217,7 @@
 			children = (
 				BB24CD4327CD3A54003E0715 /* TopOrderView.swift */,
 				BB24CD4527CD3A62003E0715 /* BottomOrderView.swift */,
+				BB36388627EA3B77004B72CB /* CloseButtonView.swift */,
 			);
 			path = "Order Completed";
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 				BB1EA20A27C6AE11005E9BDD /* CarInfoPhotosView.swift in Sources */,
 				BBD0494F27D7C4F000CE0E34 /* OrderDetailsView.swift in Sources */,
 				BB1EA1EA27C6A486005E9BDD /* CarOrderFormApp.swift in Sources */,
+				BB36388727EA3B77004B72CB /* CloseButtonView.swift in Sources */,
 				BB1EA20C27C6AFC2005E9BDD /* CarInfoView.swift in Sources */,
 				BB1E7B3D27D675B700F9F488 /* CancelOrderView.swift in Sources */,
 				BB1D5DC827D916F700D4FD71 /* API.swift in Sources */,

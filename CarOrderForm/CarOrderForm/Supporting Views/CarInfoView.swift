@@ -18,9 +18,16 @@ struct CarInfoView: View {
                 .fill(Color.baseGray)
                 .frame(height: 450)
             VStack{
+                CloseButtonView()
+                    .offset(y:130)
                 VStack{
                     AsyncImage(url: URL(string: "http://localhost:1337"+car.logoBack)).offset(y:120)
-                    AsyncImage(url: URL(string: "http://localhost:1337"+car.car))
+                    AsyncImage(url: URL(string: "http://localhost:1337"+car.car)){ image in
+                        image.resizable()
+                    }placeholder: {
+                        Rectangle()
+                    }
+                        .frame(width:400, height:200)
                     AsyncImage(url: URL(string: "http://localhost:1337"+car.logo)).offset(y:-12)
                 }
                 

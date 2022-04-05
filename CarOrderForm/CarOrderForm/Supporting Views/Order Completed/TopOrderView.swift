@@ -10,20 +10,9 @@ import SwiftUI
 struct TopOrderView: View {
     var body: some View {
         VStack{
-            closeButton
+            CloseButtonView()
             carInfo
         }.padding(20)
-    }
-    
-    var closeButton: some View{
-        HStack{
-            NavigationLink(destination: ContentView().navigationBarHidden(true)){
-                Image(systemName: "xmark")
-                    .resizable()
-                    .frame(width: 25, height: 25)
-            }
-            Spacer()
-        }
     }
     
     

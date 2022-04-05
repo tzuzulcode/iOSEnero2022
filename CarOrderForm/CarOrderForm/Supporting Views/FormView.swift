@@ -13,6 +13,8 @@ struct FormView: View {
     
     @EnvironmentObject var orderViewModel:OrderViewModel
     
+    @EnvironmentObject var car:Car
+    
     
     var options = [0,1,2,3,4,5]
     
@@ -97,7 +99,7 @@ struct FormView: View {
             Section{
                 HStack(alignment:.center){
                     Spacer()
-                    Text("$\(orderViewModel.rentalPeriods[orderViewModel.rentalPeriod]*40*orderViewModel.numberOfCarsOptions[orderViewModel.numberOfCars])")
+                    Text("$\(orderViewModel.rentalPeriods[orderViewModel.rentalPeriod]*car.price*orderViewModel.numberOfCarsOptions[orderViewModel.numberOfCars])")
                         .fontWeight(.bold)
                         .font(.system(size: 40))
                     Spacer()
@@ -131,5 +133,6 @@ struct FormView_Previews: PreviewProvider {
     static var previews: some View {
         FormView()
             .environmentObject(OrderViewModel())
+            .environmentObject(Car())
     }
 }
